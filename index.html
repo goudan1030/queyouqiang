@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#b53b2d"><meta name="description" content="雀有腔，收集牌桌上的家乡话。按方言探索麻将音效，点击试听，收藏你的开桌暗号。">
+  <title>雀有腔 · 四川麻将音效小程序</title>
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml"><link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="site-header"><div class="header-inner">
+    <a class="brand" href="/" aria-label="雀有腔首页"><span class="brand-mark">雀</span><span class="brand-word">雀有腔<span class="brand-en">MAHJONG SOUNDS</span></span></a>
+    <nav class="top-nav" aria-label="主导航"><button data-view="all" class="nav-item active">音效广场</button><button data-view="favorites" class="nav-item">我的收藏 <span id="favorite-count">0</span></button><button data-view="recent" class="nav-item">最近播放</button></nav>
+    <button class="about-button" id="about-button"><span class="tiny-tile">發</span> 关于雀有腔 <span class="about-arrow">↗</span></button>
+  </div></header>
+  <main class="page-shell">
+    <section class="hero" aria-label="把家乡话带上牌桌">
+      <div class="hero-pattern" aria-hidden="true"></div><div class="hero-copy"><div class="eyebrow"><span></span> 蜀山四川麻将 · 原声收集</div><h1>四川麻将原声，<br>一句就有牌桌味<span class="title-dot">。</span></h1><p>四川男女声、锅子哥哥，熟悉的牌桌腔调。<br>催人出牌、接梗调侃，每一句都有自己的腔调。</p><button id="hero-play" class="hero-cta">随便听一声 <span>↗</span></button></div>
+      <div class="hero-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><span class="art-star star-one">✳</span><span class="art-star star-two">✳</span><span class="art-caption">好牌 · 好腔调</span><div class="mahjong tile-back"><span class="tile-corner">萬</span><span class="bamboo-mark">▥</span><span class="tile-bottom">一索</span></div><div class="mahjong tile-front"><span class="tile-corner">好</span><span class="tile-main">發</span><span class="tile-bottom">好 运 发 生</span></div><div class="mahjong tile-right"><span class="tile-corner">中</span><span class="tile-main">中</span><span class="tile-bottom">一 声 入 魂</span></div><div class="sound-bubble">碰！<i></i><i></i><i></i><i></i><i></i></div><div class="art-label">家乡话一响，牌桌就开场。</div></div>
+      <div class="hero-stamp">乡<br>音<span>收集所</span></div>
+    </section>
+    <div class="content-layout">
+      <aside class="dialect-sidebar"><div class="section-kicker">声音分组 <span>COLLECTIONS</span></div><div id="group-list" class="group-list"></div><div class="sidebar-note"><span class="note-icon">◌</span><h3>原声分类，随手就听</h3><p>人声、音效和音乐，都在这一桌。</p><button id="collection-info">看看素材说明 <span>↗</span></button></div></aside>
+      <section class="sound-library" aria-label="声音列表"><div class="library-heading"><label class="search-box"><span data-icon="search"></span><input id="search" type="search" placeholder="搜一搜，想听哪一声" aria-label="搜索音效"><kbd>/</kbd></label></div>
+      <div class="filter-row simple-tools"><button class="filter-trigger" id="filter-trigger"><span>筛选</span><span>⌄</span></button><label class="sort-label"><span data-icon="sort"></span><select id="sort" aria-label="音效排序"><option value="default">默认排序</option><option value="name">名称排序</option></select></label></div>
+      <div id="sound-grid" class="sound-grid"></div><button id="load-more" class="load-more">继续加载</button><div id="empty-state" class="empty-state" hidden><span class="empty-tile">听</span><h3 id="empty-title"></h3><p id="empty-message"></p><button id="reset-filters">看看全部音效</button></div>
+      <div class="collection-footer"><span><span class="green-dot"></span> 声音有方言，快乐无门槛</span><span>蜀山四川麻将 · 游戏原声</span></div>
+      </section>
+    </div>
+    <footer class="site-footer"><span class="footer-brand">雀有腔</span><span>把家乡话，带上牌桌。</span><span class="footer-right">打的是麻将，听的是乡情。 <span>✳</span></span></footer>
+  </main>
+  <section class="player" aria-label="音效播放器"><div class="player-inner"><div class="now-playing"><span class="player-tile" id="player-glyph">听</span><div><div class="player-title" id="player-title">好腔调，等你来听</div><div class="player-meta" id="player-meta">选一张音效卡片，开启你的牌桌</div></div><button class="icon-button player-fav" id="player-favorite" aria-label="收藏当前音效" disabled></button></div><div class="playback-area"><div class="playback-buttons"><button class="icon-button" id="shuffle" aria-label="随机播放一声" title="随机播放"><span data-icon="shuffle"></span></button><button class="icon-button" id="previous" aria-label="上一条"><span data-icon="previous"></span></button><button id="main-play" class="main-play" aria-label="播放"><span data-icon="play"></span></button><button class="icon-button" id="next" aria-label="下一条"><span data-icon="next"></span></button><button class="icon-button" id="loop" aria-label="循环播放" aria-pressed="false" title="单条循环"><span data-icon="loop"></span></button></div><div class="progress-row"><span id="elapsed">0:00</span><input id="progress" type="range" min="0" max="100" value="0" step="0.1" aria-label="播放进度"><span id="duration">0:00</span></div></div><div class="volume-control"><span class="player-status" id="player-status">等一声乡音</span><button class="icon-button" id="mute" aria-label="静音"><span data-icon="volume"></span></button><input id="volume" type="range" min="0" max="1" value="0.8" step="0.01" aria-label="音量"></div></div></section>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <dialog id="about-dialog"><button class="dialog-close icon-button" id="close-dialog" aria-label="关闭">×</button><span class="brand-mark dialog-logo">雀</span><div class="section-kicker">A LITTLE SOUND OF HOME</div><h2>一张牌，一句家乡话。</h2><p>按内容、角色和性别整理的四川麻将原声音效库。聊天台词优先展示，同一内容的不同版本可单独试听。</p><div class="source-note"><b>关于这套音频</b><p>开源仓库仅提供程序代码、界面和目录元数据，不提供音频文件。目录中的第三方素材权利归原权利人所有，试听需在本地自行配置已获授权的音频。</p><p>台词文字由本机语音识别辅助整理，仅供搜索参考，方言可能有识别偏差，请以原声为准。收藏和播放记录仅保存在当前设备。</p></div><button class="dialog-confirm" id="confirm-dialog">好，开桌！</button></dialog>
+  <dialog id="filter-dialog"><div class="filter-heading"><h2>筛选声音</h2><button class="icon-button" id="filter-close" aria-label="关闭筛选">×</button></div><p class="filter-label">内容</p><div class="category-tabs" id="category-tabs" aria-label="音效类型"></div><div id="voice-filters"><p class="filter-label">角色</p><div id="dialect-list" class="role-choices"></div><p class="filter-label">性别</p><div class="gender-tabs" id="gender-tabs" aria-label="性别筛选"></div></div><div class="filter-actions"><button id="filter-reset">重置</button><button id="filter-done">查看声音</button></div></dialog>
+  <script src="/miniprogram/utils/shushan.js"></script><script src="/miniprogram/utils/catalog.js"></script><script src="/app.js"></script>
+</body></html>

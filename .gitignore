@@ -1,0 +1,40 @@
+# Local dependencies and system files
+node_modules/
+.DS_Store
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Private development settings (copy the example for a fresh checkout)
+miniprogram/project.config.json
+miniprogram/project.private.config.json
+
+# Third-party recordings and local import / recognition output
+.import-stage/
+artifacts/
+data/
+**/audio/
+*.[mM][pP]3
+*.[mM]4[aAbBpP]
+*.[aA][aA][cC]
+*.[wW][aA][vV]
+*.[oO][gG][gGaA]
+*.[fF][lL][aA][cC]
+*.[oO][pP][uU][sS]
+*.[aA][iI][fF]
+*.[aA][iI][fF][fF]
+*.[wW][mM][aA]
+*.mp4
+*.webm
+*.mov
+*.zip
+*.7z
+*.tar
+*.gz
+
+# Local tooling output
+graphify-out/

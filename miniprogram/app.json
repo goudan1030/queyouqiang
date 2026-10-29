@@ -1,0 +1,122 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "雀有腔",
+    "navigationBarBackgroundColor": "#f8f6f0",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#f8f6f0",
+    "backgroundTextStyle": "dark"
+  },
+  "style": "v2",
+  "lazyCodeLoading": "requiredComponents",
+  "sitemapLocation": "sitemap.json",
+  "subPackages": [
+    {
+      "name": "shushan_effects_1",
+      "root": "packs/shushan_effects_1",
+      "pages": [
+        "index"
+      ]
+    },
+    {
+      "name": "shushan_effects_2",
+      "root": "packs/shushan_effects_2",
+      "pages": [
+        "index"
+      ]
+    },
+    {
+      "name": "shushan_music_1",
+      "root": "packs/shushan_music_1",
+      "pages": [
+        "index"
+      ]
+    },
+    {
+      "name": "shushan_music_2",
+      "root": "packs/shushan_music_2",
+      "pages": [
+        "index"
+      ]
+    },
+    {
+      "name": "shushan_music_3",
+      "root": "packs/shushan_music_3",
+      "pages": [
+        "index"
+      ]
+    },
+    {
+      "name": "shushan_tiles_guozi_1",
+      "root": "packs/shushan_tiles_guozi_1",
+      "pages": [
+        "index"
+      ]
+    },
+    {
+      "name": "shushan_tiles_normal_female_1",
+      "root": "packs/shushan_tiles_normal_female_1",
+      "pages": [
+        "index"
+      ]
+    },
+    {
+      "name": "shushan_tiles_normal_male_1",
+      "root": "packs/shushan_tiles_normal_male_1",
+      "pages": [
+        "index"
+      ]
+    },
+    {
+      "name": "shushan_tiles_sc_female_1",
+      "root": "packs/shushan_tiles_sc_female_1",
+      "pages": [
+        "index"
+      ]
+    },
+    {
+      "name": "shushan_tiles_sc_male_1",
+      "root": "packs/shushan_tiles_sc_male_1",
+      "pages": [
+        "index"
+      ]
+    },
+    {
+      "name": "shushan_voice_guozi_1",
+      "root": "packs/shushan_voice_guozi_1",
+      "pages": [
+        "index"
+      ]
+    },
+    {
+      "name": "shushan_voice_normal_female_1",
+      "root": "packs/shushan_voice_normal_female_1",
+      "pages": [
+        "index"
+      ]
+    },
+    {
+      "name": "shushan_voice_normal_male_1",
+      "root": "packs/shushan_voice_normal_male_1",
+      "pages": [
+        "index"
+      ]
+    },
+    {
+      "name": "shushan_voice_sc_female_1",
+      "root": "packs/shushan_voice_sc_female_1",
+      "pages": [
+        "index"
+      ]
+    },
+    {
+      "name": "shushan_voice_sc_male_1",
+      "root": "packs/shushan_voice_sc_male_1",
+      "pages": [
+        "index"
+      ]
+    }
+  ]
+}
