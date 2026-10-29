@@ -11,6 +11,38 @@
 
 > **本仓库不包含任何音频文件，也不提供音频下载地址。** 开源内容包括程序代码、界面与目录元数据。第三方录音、配音、音乐及相关素材的权利属于各自权利人，不适用本仓库的 MIT 代码许可。克隆后可以浏览界面、搜索和筛选；实际播放需自行配置合法授权的本地音频。
 
+## 扫码体验
+
+使用微信扫一扫下方二维码，打开小程序体验。
+
+<div align="center">
+  <img src="docs/images/miniprogram-qrcode.png" width="165" height="165" alt="雀有腔小程序体验二维码">
+  <p>微信扫码 · 体验雀有腔</p>
+</div>
+
+二维码由项目维护者提供；可访问版本与体验权限以微信实际提示为准。线上小程序的体验内容与本仓库的源码分发范围不同，仓库始终不包含第三方音频。
+
+## 小程序截图
+
+以下为当前项目在微信开发者工具中的模拟器截图，点击图片可查看原图。
+
+**首页 · 人声台词**
+
+<a href="docs/images/miniprogram-home.png"><img src="docs/images/miniprogram-home.png" width="900" alt="小程序首页：品牌封面、三个内容入口、搜索框、人声台词卡片和底部播放器"></a>
+
+<details>
+<summary>查看声音筛选与牌型报牌截图</summary>
+
+**声音筛选**：按内容、角色、性别组合筛选。
+
+<a href="docs/images/miniprogram-filters.png"><img src="docs/images/miniprogram-filters.png" width="900" alt="小程序声音筛选面板：内容、角色、性别筛选及结果数量"></a>
+
+**牌型报牌**：双列报牌卡片，支持同一内容的不同版本。
+
+<a href="docs/images/miniprogram-tiles.png"><img src="docs/images/miniprogram-tiles.png" width="900" alt="小程序牌型报牌列表：麻将牌型、多个音频版本、收藏入口和播放器"></a>
+
+</details>
+
 ## 功能
 
 - **三类内容入口**：人声台词、牌型报牌、音效音乐分别浏览，支持内容、角色、性别和关键词组合筛选。
